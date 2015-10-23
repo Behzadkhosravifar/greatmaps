@@ -28,7 +28,7 @@
       /// </summary>
       private void InitializeComponent()
       {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.MainMap = new Demo.WindowsForms.Map();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -117,6 +117,7 @@
             this.radioButtonTcpIp = new System.Windows.Forms.RadioButton();
             this.checkBoxTraceRoute = new System.Windows.Forms.CheckBox();
             this.radioButtonVehicle = new System.Windows.Forms.RadioButton();
+            this.btnPrintMap = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnPrintMap);
             this.panel2.Controls.Add(this.MainMap);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -163,6 +165,7 @@
             this.MainMap.MarkersEnabled = true;
             this.MainMap.MaxZoom = 17;
             this.MainMap.MinZoom = 2;
+            this.MainMap.MouseWheelZoomEnabled = true;
             this.MainMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.MainMap.Name = "MainMap";
             this.MainMap.NegativeMode = false;
@@ -282,14 +285,13 @@
             this.xPanderPanelMain.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.xPanderPanelMain.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.xPanderPanelMain.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
-            this.xPanderPanelMain.Expand = true;
             this.xPanderPanelMain.ForeColor = System.Drawing.SystemColors.ControlText;
             this.xPanderPanelMain.Image = null;
             this.xPanderPanelMain.IsClosable = false;
             this.xPanderPanelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xPanderPanelMain.Name = "xPanderPanelMain";
             this.xPanderPanelMain.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanelMain.Size = new System.Drawing.Size(304, 714);
+            this.xPanderPanelMain.Size = new System.Drawing.Size(304, 25);
             this.xPanderPanelMain.TabIndex = 0;
             this.xPanderPanelMain.Text = "map";
             this.xPanderPanelMain.ToolTipTextCloseIcon = null;
@@ -310,7 +312,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(302, 689);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(302, 0);
             this.tableLayoutPanel4.TabIndex = 38;
             // 
             // tableLayoutPanel5
@@ -331,7 +333,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 7F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(235, 687);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(235, 1);
             this.tableLayoutPanel5.TabIndex = 30;
             // 
             // groupBox8
@@ -782,7 +784,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(58, 683);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(58, 1);
             this.tableLayoutPanel6.TabIndex = 31;
             // 
             // buttonZoomUp
@@ -809,7 +811,7 @@
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(58, 617);
+            this.trackBar1.Size = new System.Drawing.Size(58, 1);
             this.trackBar1.TabIndex = 29;
             this.trackBar1.TickFrequency = 100;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
@@ -820,7 +822,7 @@
             // 
             this.buttonZoomDown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonZoomDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonZoomDown.Location = new System.Drawing.Point(0, 650);
+            this.buttonZoomDown.Location = new System.Drawing.Point(0, -32);
             this.buttonZoomDown.Margin = new System.Windows.Forms.Padding(0);
             this.buttonZoomDown.Name = "buttonZoomDown";
             this.buttonZoomDown.Size = new System.Drawing.Size(58, 33);
@@ -1277,6 +1279,7 @@
             this.xPanderPanelLive.CustomColors.FlatCaptionGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.xPanderPanelLive.CustomColors.FlatCaptionGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.xPanderPanelLive.CustomColors.InnerBorderColor = System.Drawing.SystemColors.Window;
+            this.xPanderPanelLive.Expand = true;
             this.xPanderPanelLive.ForeColor = System.Drawing.SystemColors.ControlText;
             this.xPanderPanelLive.Image = null;
             this.xPanderPanelLive.IsClosable = false;
@@ -1284,7 +1287,7 @@
             this.xPanderPanelLive.Name = "xPanderPanelLive";
             this.xPanderPanelLive.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.xPanderPanelLive.PanelStyle = BSE.Windows.Forms.PanelStyle.Office2007;
-            this.xPanderPanelLive.Size = new System.Drawing.Size(304, 25);
+            this.xPanderPanelLive.Size = new System.Drawing.Size(304, 714);
             this.xPanderPanelLive.TabIndex = 2;
             this.xPanderPanelLive.Text = "live";
             this.xPanderPanelLive.ToolTipTextCloseIcon = null;
@@ -1320,7 +1323,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(302, 0);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(302, 659);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // radioButtonNone
@@ -1342,7 +1345,7 @@
             this.checkBoxTcpIpSnap.AutoSize = true;
             this.checkBoxTcpIpSnap.Checked = true;
             this.checkBoxTcpIpSnap.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTcpIpSnap.Location = new System.Drawing.Point(23, -47);
+            this.checkBoxTcpIpSnap.Location = new System.Drawing.Point(23, 611);
             this.checkBoxTcpIpSnap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxTcpIpSnap.Name = "checkBoxTcpIpSnap";
             this.checkBoxTcpIpSnap.Size = new System.Drawing.Size(238, 21);
@@ -1360,14 +1363,14 @@
             this.GridConnections.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CountryName,
             this.ConnectionsCount});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridConnections.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridConnections.DefaultCellStyle = dataGridViewCellStyle4;
             this.GridConnections.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridConnections.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.GridConnections.Location = new System.Drawing.Point(23, 167);
@@ -1378,7 +1381,7 @@
             this.GridConnections.RowTemplate.Height = 24;
             this.GridConnections.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridConnections.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridConnections.Size = new System.Drawing.Size(256, 1);
+            this.GridConnections.Size = new System.Drawing.Size(256, 440);
             this.GridConnections.TabIndex = 5;
             this.GridConnections.VirtualMode = true;
             this.GridConnections.Visible = false;
@@ -1440,7 +1443,7 @@
             // checkBoxTraceRoute
             // 
             this.checkBoxTraceRoute.AutoSize = true;
-            this.checkBoxTraceRoute.Location = new System.Drawing.Point(23, -22);
+            this.checkBoxTraceRoute.Location = new System.Drawing.Point(23, 636);
             this.checkBoxTraceRoute.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxTraceRoute.Name = "checkBoxTraceRoute";
             this.checkBoxTraceRoute.Size = new System.Drawing.Size(233, 21);
@@ -1461,6 +1464,17 @@
             this.radioButtonVehicle.Text = "Vehicle demo";
             this.radioButtonVehicle.UseVisualStyleBackColor = true;
             this.radioButtonVehicle.CheckedChanged += new System.EventHandler(this.RealTimeChanged);
+            // 
+            // btnPrintMap
+            // 
+            this.btnPrintMap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintMap.Location = new System.Drawing.Point(3, 3);
+            this.btnPrintMap.Name = "btnPrintMap";
+            this.btnPrintMap.Size = new System.Drawing.Size(82, 37);
+            this.btnPrintMap.TabIndex = 7;
+            this.btnPrintMap.Text = "Print Map";
+            this.btnPrintMap.UseVisualStyleBackColor = true;
+            this.btnPrintMap.Click += new System.EventHandler(this.btnPrintMap_Click);
             // 
             // MainForm
             // 
@@ -1601,6 +1615,7 @@
       private System.Windows.Forms.TextBox textBoxCacheSize;
       private System.Windows.Forms.Button button17;
       private System.Windows.Forms.CheckBox checkBoxTileHost;
-   }
+        private System.Windows.Forms.Button btnPrintMap;
+    }
 }
 

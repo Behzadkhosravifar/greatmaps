@@ -1,0 +1,10 @@
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\bin\Release\GMap.NET.WindowsForms.dll
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\bin\Release\GMap.NET.WindowsForms.XML
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\bin\Release\GMap.NET.Core.dll
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csprojResolveAssemblyReference.cache
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.MapPrintPreviewForm.resources
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\obj\Release\GMap.NET.TilePrefetcher.resources
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\obj\Release\System.Windows.Forms.Properties.PageResource.resources
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\obj\Release\System.Windows.Forms.Properties.Resources.resources
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csproj.GenerateResource.Cache
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.dll

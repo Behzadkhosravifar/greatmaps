@@ -1,0 +1,12 @@
+D:\Projecting\GMap\greatmaps\Build\Release-NETv4.5\Demo.WindowsForms.exe.config
+D:\Projecting\GMap\greatmaps\Build\Release-NETv4.5\Demo.WindowsForms.exe
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\Demo.WindowsForms.csprojResolveAssemblyReference.cache
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\BSE.Windows.Forms.Panel.resources
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\BSE.Windows.Forms.XPanderPanel.resources
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\BSE.Windows.Forms.XPanderPanelList.resources
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\Demo.WindowsForms.MainForm.resources
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\Demo.WindowsForms.Forms.Message.resources
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\Demo.WindowsForms.StaticImage.resources
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\Demo.WindowsForms.Properties.Resources.resources
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\Demo.WindowsForms.csproj.GenerateResource.Cache
+D:\Projecting\GMap\greatmaps\Demo.WindowsForms\obj\Release\Demo.WindowsForms.exe

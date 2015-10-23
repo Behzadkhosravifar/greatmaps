@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>System.Windows.Forms</RootNamespace>
     <AssemblyName>GMap.NET.WindowsForms</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
@@ -18,6 +18,7 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -49,6 +51,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,8 +62,21 @@
     <Compile Include="..\GMap.NET.Core\Properties\VersionInfo.cs">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="ControlHelper.cs" />
+    <Compile Include="CustomGMapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GMap.NET.ObjectModel\CustomerMarker.cs" />
+    <Compile Include="GMap.NET.ObjectModel\DuplicateKeyComparer.cs" />
+    <Compile Include="GMap.NET.ObjectModel\PaperSizes.cs" />
     <Compile Include="GMap.NET.WindowsForms\ColorMatrixs.cs" />
     <Compile Include="GMap.NET.WindowsForms\GMapPolygon.cs" />
+    <Compile Include="GMap.NET.WindowsForms\MapPrintPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GMap.NET.WindowsForms\MapPrintPreviewForm.designer.cs">
+      <DependentUpon>MapPrintPreviewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GMap.NET.WindowsForms\Markers\GMarkerGoogle.cs" />
     <Compile Include="GMap.NET.WindowsForms\ToolTips\GMapBaloonToolTip.cs" />
     <Compile Include="GMap.NET.WindowsForms\ToolTips\GMapRoundedToolTip.cs" />
@@ -75,6 +91,12 @@
     <Compile Include="GMap.NET.WindowsForms\Markers\GMarkerCross.cs" />
     <Compile Include="GMap.NET.WindowsForms\GMapOverlay.cs" />
     <Compile Include="GMap.NET.WindowsForms\GMapImage.cs" />
+    <Compile Include="GMapMarkerRect.cs" />
+    <Compile Include="Properties\PageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +111,8 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="sn.snk" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -99,8 +123,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GMap.NET.WindowsForms\MapPrintPreviewForm.resx">
+      <DependentUpon>MapPrintPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GMap.NET.WindowsForms\TilePrefetcher.resx">
       <DependentUpon>TilePrefetcher.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\PageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PageResource.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,14 +143,50 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resources\A0.jpg" />
+    <Content Include="Resources\A1.jpg" />
+    <Content Include="Resources\A2.jpg" />
+    <Content Include="Resources\A3.jpg" />
+    <Content Include="Resources\A4.jpg" />
+    <Content Include="Resources\A5.jpg" />
+    <Content Include="Resources\A6.jpg" />
+    <Content Include="Resources\A7.jpg" />
+    <Content Include="Resources\A8.jpg" />
+    <Content Include="Resources\A9.jpg" />
+    <Content Include="Resources\A10.jpg" />
     <Content Include="Resources\arrow.png" />
     <Content Include="Resources\arrowshadow.png" />
+    <Content Include="Resources\B0.jpg" />
+    <Content Include="Resources\B1.jpg" />
+    <Content Include="Resources\B2.jpg" />
+    <Content Include="Resources\B3.jpg" />
+    <Content Include="Resources\B4.jpg" />
+    <Content Include="Resources\B5.jpg" />
+    <Content Include="Resources\B6.jpg" />
+    <Content Include="Resources\B7.jpg" />
+    <Content Include="Resources\B8.jpg" />
+    <Content Include="Resources\B9.jpg" />
+    <Content Include="Resources\B10.jpg" />
     <Content Include="Resources\black_small.png" />
     <Content Include="Resources\blue-dot.png" />
     <Content Include="Resources\blue-pushpin.png" />
     <Content Include="Resources\blue.png" />
     <Content Include="Resources\blue_small.png" />
     <Content Include="Resources\brown_small.png" />
+    <Content Include="Resources\C0.jpg" />
+    <Content Include="Resources\C1.jpg" />
+    <Content Include="Resources\C2.jpg" />
+    <Content Include="Resources\C3.jpg" />
+    <Content Include="Resources\C4.jpg" />
+    <Content Include="Resources\C5.jpg" />
+    <Content Include="Resources\C6.jpg" />
+    <Content Include="Resources\C7.jpg" />
+    <Content Include="Resources\C8.jpg" />
+    <Content Include="Resources\C9.jpg" />
+    <Content Include="Resources\C10.jpg" />
+    <Content Include="Resources\close-icon.png" />
+    <Content Include="Resources\DL.jpg" />
+    <Content Include="Resources\Document-xml-icon.png" />
     <Content Include="Resources\drag_cross_67_16.png" />
     <Content Include="Resources\go-big-green.png" />
     <Content Include="Resources\gray_small.png" />
@@ -126,9 +194,16 @@
     <Content Include="Resources\green.png" />
     <Content Include="Resources\green_small.png" />
     <Content Include="Resources\grn-pushpin.png" />
+    <Content Include="Resources\HideInfo.png" />
     <Content Include="Resources\lightblue.png" />
     <Content Include="Resources\ltblu-pushpin.png" />
     <Content Include="Resources\ltblue-dot.png" />
+    <Content Include="Resources\MapPrinter.png" />
+    <Content Include="Resources\MapPrintPreview.png" />
+    <Content Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <None Include="Resources\marker32.png" />
     <Content Include="Resources\msmarker.shadow.png" />
     <Content Include="Resources\orange-dot.png" />
     <Content Include="Resources\orange.png" />
@@ -146,7 +221,10 @@
     <Content Include="Resources\red-pushpin.png" />
     <Content Include="Resources\red.png" />
     <Content Include="Resources\red_small.png" />
+    <Content Include="Resources\Rotate2Landscape.png" />
+    <Content Include="Resources\Rotate2Portrait.png" />
     <Content Include="Resources\shadow_small.png" />
+    <Content Include="Resources\ShowInfo.png" />
     <Content Include="Resources\stop-big-red.png" />
     <Content Include="Resources\white_small.png" />
     <Content Include="Resources\yellow-dot.png" />

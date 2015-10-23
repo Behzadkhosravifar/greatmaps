@@ -1,0 +1,11 @@
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\bin\Debug\GMap.NET.WindowsPresentation.dll
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\bin\Debug\GMap.NET.WindowsPresentation.pdb
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\bin\Debug\GMap.NET.Core.dll
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\bin\Debug\GMap.NET.Core.pdb
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\obj\Debug\GMap.NET.WindowsPresentation.csprojResolveAssemblyReference.cache
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\obj\Debug\GMap.NET.WindowsPresentation\TilePrefetcher.baml
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\obj\Debug\GMap.NET.WindowsPresentation\TilePrefetcher.g.cs
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\obj\Debug\GMap.NET.WindowsPresentation_MarkupCompile.cache
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\obj\Debug\GMap.NET.WindowsPresentation.g.resources
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\obj\Debug\GMap.NET.WindowsPresentation.dll
+D:\Projecting\GMap\greatmaps\GMap.NET.WindowsPresentation\obj\Debug\GMap.NET.WindowsPresentation.pdb
