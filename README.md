@@ -14,4 +14,4 @@ GMap.NET - Great Maps for Windows Forms &amp; Presentation
 
 ### Map Print Preview
 
-![screen](https://raw.githubusercontent.com/Behzadkhosravifar/greatmaps/master/Info/screen.png)
+![screen](https://raw.githubusercontent.com/Behzadkhosravifar/greatmaps/master/Info/screenshut.png)
