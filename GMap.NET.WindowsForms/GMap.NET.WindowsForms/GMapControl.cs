@@ -1045,7 +1045,35 @@ namespace GMap.NET.WindowsForms
         #region UserControl Events
 
 #if !PocketPC
-        public readonly static bool IsDesignerHosted = LicenseManager.UsageMode == LicenseUsageMode.Designtime;
+
+        /// <summary>
+        /// The DesignMode property does not correctly tell you if
+        /// you are in design mode.  IsDesignerHosted is a corrected
+        /// version of that property.
+        /// (see https://connect.microsoft.com/VisualStudio/feedback/details/553305
+        /// and http://stackoverflow.com/a/2693338/238419 )
+        /// </summary>
+        public static bool IsDesignerHosted
+        {
+            get
+            {
+                try
+                {
+                    // Ugly hack, but it works in every version
+                    if (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv" || // Win Form
+                        System.Diagnostics.Process.GetCurrentProcess().ProcessName == "XDesProc") // WPF
+                        return true;
+                }
+                catch
+                {
+                    if (Application.ExecutablePath.EndsWith("devenv.exe", StringComparison.OrdinalIgnoreCase) || // Win Form
+                        Application.ExecutablePath.EndsWith("XDesProc.exe", StringComparison.OrdinalIgnoreCase)) // WPF
+                        return true;
+                }
+
+                return (LicenseManager.UsageMode == LicenseUsageMode.Designtime);
+            }
+        }
 
         protected override void OnLoad(EventArgs e)
         {
